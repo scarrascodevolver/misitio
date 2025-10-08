@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elías Carrasco Aguayo - Desarrollador Full Stack Laravel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ff9d',
+                        cyan: '#00f0ff',
+                        magenta: '#ff00e5',
+                        yellow: '#ffee00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes neon-pulse {
+            0%, 100% { text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 30px #00ff9d; }
+            50% { text-shadow: 0 0 20px #00ff9d, 0 0 30px #00ff9d, 0 0 40px #00ff9d; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .neon-text {
+            animation: neon-pulse 2s infinite;
+        }
+        .cyber-border {
+            position: relative;
+            border: 2px solid #00ff9d;
+            box-shadow: 0 0 10px #00ff9d, inset 0 0 10px rgba(0, 255, 157, 0.1);
+        }
+        .cyber-border::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 20px;
+            width: 40px;
+            height: 4px;
+            background: #00f0ff;
+        }
+        .cyber-border::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: 20px;
+            width: 40px;
+            height: 4px;
+            background: #ff00e5;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Grid background -->
+    <div class="fixed inset-0 bg-[linear-gradient(rgba(0,255,157,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,157,0.03)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b-2 border-neon/30">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon neon-text">{'<ECA />'}</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="hover:text-neon transition-all duration-300 border-b-2 border-transparent hover:border-neon">inicio()</a>
+                    <a href="#sobre-mi" class="hover:text-cyan transition-all duration-300 border-b-2 border-transparent hover:border-cyan">sobreMi()</a>
+                    <a href="#proyectos" class="hover:text-magenta transition-all duration-300 border-b-2 border-transparent hover:border-magenta">proyectos()</a>
+                    <a href="#skills" class="hover:text-yellow transition-all duration-300 border-b-2 border-transparent hover:border-yellow">skills()</a>
+                    <a href="#contacto" class="hover:text-neon transition-all duration-300 border-b-2 border-transparent hover:border-neon">contacto()</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute top-20 right-20 w-64 h-64 bg-neon/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 left-20 w-64 h-64 bg-cyan/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <div class="mb-6 font-mono text-gray-500">
+                    <span class="text-neon">const</span> desarrollador = {'{'}
+                </div>
+
+                <h1 class="text-7xl font-bold mb-4 ml-8">
+                    <span class="text-neon neon-text">Elías Carrasco Aguayo</span>
+                </h1>
+
+                <div class="ml-8 mb-6">
+                    <p class="font-mono text-xl text-cyan mb-2">
+                        <span class="text-gray-500">role:</span> <span className="text-white">"Full Stack Developer"</span>,
+                    </p>
+                    <p class="font-mono text-xl text-magenta mb-2">
+                        <span class="text-gray-500">stack:</span> <span className="text-white">["Laravel", "PHP", "MySQL"]</span>,
+                    </p>
+                    <p class="font-mono text-xl text-yellow mb-2">
+                        <span class="text-gray-500">location:</span> <span className="text-white">"La Coruña, España"</span>,
+                    </p>
+                    <p class="font-mono text-xl text-neon">
+                        <span class="text-gray-500">status:</span> <span className="text-white">"Available for hire"</span>
+                    </p>
+                </div>
+
+                <div class="font-mono text-gray-500 mb-8">{'}'}</div>
+
+                <div class="flex flex-wrap gap-4 ml-8">
+                    <a href="#proyectos" class="cyber-border px-8 py-3 font-mono bg-black hover:bg-neon/10 transition-all duration-300">
+                        Ver_Proyectos()
+                    </a>
+                    <a href="#contacto" class="border-2 border-cyan px-8 py-3 font-mono hover:bg-cyan/10 transition-all duration-300">
+                        Contactar()
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-20 relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-bold mb-12 font-mono">
+                <span class="text-cyan">{'<'}</span>
+                <span class="text-white">SobreMí</span>
+                <span class="text-cyan">{' />'}</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl">
+                <div class="cyber-border p-8 bg-black/50">
+                    <div class="text-neon text-4xl mb-4">// Perfil</div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Desarrollador Full Stack especializado en <span class="text-neon font-bold">Laravel</span> con experiencia
+                        en infraestructura TI y automatización de procesos.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Transformo operaciones manuales en sistemas digitales eficientes, utilizando tecnología moderna
+                        y mejores prácticas de desarrollo.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="border-l-4 border-neon pl-6 bg-black/50 p-6">
+                        <div class="text-4xl font-bold text-neon mb-2">5+</div>
+                        <div class="text-gray-400 font-mono">proyectos activos</div>
+                    </div>
+                    <div class="border-l-4 border-cyan pl-6 bg-black/50 p-6">
+                        <div class="text-4xl font-bold text-cyan mb-2">3+</div>
+                        <div class="text-gray-400 font-mono">años experiencia</div>
+                    </div>
+                    <div class="border-l-4 border-magenta pl-6 bg-black/50 p-6">
+                        <div class="text-4xl font-bold text-magenta mb-2">10+</div>
+                        <div class="text-gray-400 font-mono">tecnologías</div>
+                    </div>
+                    <div class="border-l-4 border-yellow pl-6 bg-black/50 p-6">
+                        <div class="text-4xl font-bold text-yellow mb-2">100%</div>
+                        <div class="text-gray-400 font-mono">trabajo remoto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-12 font-mono">
+                <span class="text-magenta">{'<'}</span>
+                <span class="text-white">Proyectos</span>
+                <span class="text-magenta">{' />'}</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Proyecto 1 -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-neon to-cyan opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="cyber-border p-6 bg-black relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-neon">[01]</span>
+                            <span class="px-3 py-1 bg-neon/20 text-neon text-xs font-mono">LARAVEL</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata" muted>
+                                <source src="assets/videos/sistema-insumos.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 font-mono text-white">Sistema Solicitud Insumos</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Sistema integral Laravel 12 + MySQL en VPS. Automatizó procesos ahorrando 15h semanales.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-neon">#Laravel</span>
+                            <span class="text-cyan">#MySQL</span>
+                            <span class="text-magenta">#VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-magenta to-yellow opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="cyber-border p-6 bg-black relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-magenta">[02]</span>
+                            <span class="px-3 py-1 bg-magenta/20 text-magenta text-xs font-mono">VIDEO</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata" muted>
+                                <source src="assets/videos/analisis-videos.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 font-mono text-white">Análisis Video Deportivo</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Plataforma Laravel 12 para Club de Rugby Los Troncos. Análisis detallado de jugadas y estadísticas en VPS.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-magenta">#Laravel</span>
+                            <span class="text-yellow">#VideoProcessing</span>
+                            <span class="text-neon">#VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-12 font-mono">
+                <span class="text-yellow">{'<'}</span>
+                <span class="text-white">Skills</span>
+                <span class="text-yellow">{' />'}</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl">
+                <!-- Backend -->
+                <div class="border-2 border-neon p-6 bg-black/50 hover:bg-neon/5 transition-all duration-300">
+                    <div class="font-mono text-neon text-2xl mb-4">// Backend</div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">Laravel</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-neon to-cyan w-11/12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">PHP</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-neon to-cyan w-10/12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">Python</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-neon to-cyan w-9/12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="border-2 border-cyan p-6 bg-black/50 hover:bg-cyan/5 transition-all duration-300">
+                    <div class="font-mono text-cyan text-2xl mb-4">// Frontend</div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">JavaScript</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-cyan to-magenta w-10/12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">HTML/CSS</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-cyan to-magenta w-11/12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">Bootstrap</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-cyan to-magenta w-10/12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="border-2 border-magenta p-6 bg-black/50 hover:bg-magenta/5 transition-all duration-300">
+                    <div class="font-mono text-magenta text-2xl mb-4">// DevOps</div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">Linux/VPS</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-magenta to-yellow w-10/12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">Docker</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-magenta to-yellow w-8/12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span className="text-gray-300">Git</span>
+                            <div className="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-magenta to-yellow w-11/12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-12 font-mono">
+                <span class="text-neon">{'<'}</span>
+                <span class="text-white">Contacto</span>
+                <span class="text-neon">{' />'}</span>
+            </h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="cyber-border p-12 bg-black/50">
+                    <div class="text-center mb-12">
+                        <div class="inline-block px-6 py-2 border-2 border-neon bg-neon/10 font-mono mb-6">
+                            <span className="text-neon">STATUS: AVAILABLE</span>
+                        </div>
+                        <p class="text-2xl text-gray-300 font-mono">
+                            La Coruña, España | Presencial • Híbrido • Remoto
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <a href="mailto:eliascarrascoaguayo@gmail.com" class="border-2 border-cyan p-6 hover:bg-cyan/10 transition-all duration-300 group">
+                            <div class="font-mono text-cyan mb-2 group-hover:text-white">{'>'} EMAIL</div>
+                            <div class="text-gray-400 text-sm break-all">eliascarrascoaguayo@gmail.com</div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sergio-carrasco" target="_blank" class="border-2 border-magenta p-6 hover:bg-magenta/10 transition-all duration-300 group">
+                            <div class="font-mono text-magenta mb-2 group-hover:text-white">{'>'} LINKEDIN</div>
+                            <div class="text-gray-400 text-sm">Ver perfil profesional</div>
+                        </a>
+
+                        <a href="https://github.com/sergiocarrasco" target="_blank" class="border-2 border-yellow p-6 hover:bg-yellow/10 transition-all duration-300 group">
+                            <div class="font-mono text-yellow mb-2 group-hover:text-white">{'>'} GITHUB</div>
+                            <div class="text-gray-400 text-sm">Ver repositorios</div>
+                        </a>
+
+                        <div class="border-2 border-neon p-6">
+                            <div class="font-mono text-neon mb-2">{'>'} LOCATION</div>
+                            <div class="text-gray-400 text-sm">La Coruña, España</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <a href="mailto:eliascarrascoaguayo@gmail.com" class="inline-block cyber-border px-12 py-4 font-mono text-xl hover:bg-neon/10 transition-all duration-300">
+                            {'>'} ENVIAR_MENSAJE()
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t-2 border-neon/30 mt-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="font-mono text-gray-500 mb-4 md:mb-0">
+                    © 2025 <span class="text-neon">Elías Carrasco Aguayo</span> | Full Stack Developer
+                </div>
+                <div class="flex gap-6 font-mono text-sm">
+                    <a href="#inicio" class="text-gray-500 hover:text-neon transition">inicio()</a>
+                    <a href="#proyectos" class="text-gray-500 hover:text-cyan transition">proyectos()</a>
+                    <a href="#contacto" class="text-gray-500 hover:text-magenta transition">contacto()</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // FORZAR SILENCIO PERMANENTE EN TODOS LOS VIDEOS
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+
+            videos.forEach(video => {
+                // Forzar mute al cargar
+                video.muted = true;
+                video.volume = 0;
+
+                // Prevenir que se active el sonido
+                video.addEventListener('volumechange', function() {
+                    if (!this.muted) {
+                        this.muted = true;
+                    }
+                    if (this.volume > 0) {
+                        this.volume = 0;
+                    }
+                });
+
+                // Asegurar mute antes de reproducir
+                video.addEventListener('play', function() {
+                    this.muted = true;
+                    this.volume = 0;
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

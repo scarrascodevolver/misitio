@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elías Carrasco Aguayo - Desarrollador Full Stack Laravel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#ec4899',
+                        success: '#10b981',
+                        warning: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+        }
+        .animate-slide-in-left {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out forwards;
+        }
+        .animate-scale-in {
+            animation: scaleIn 0.5s ease-out forwards;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
+
+    <!-- Navegación -->
+    <nav class="glass-effect fixed w-full top-0 z-50 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">ECA</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="hover:text-accent transition-all duration-300 font-medium">Inicio</a>
+                    <a href="#sobre-mi" class="hover:text-accent transition-all duration-300 font-medium">Sobre Mí</a>
+                    <a href="#proyectos" class="hover:text-accent transition-all duration-300 font-medium">Proyectos</a>
+                    <a href="#experiencia" class="hover:text-accent transition-all duration-300 font-medium">Experiencia</a>
+                    <a href="#contacto" class="hover:text-accent transition-all duration-300 font-medium">Contacto</a>
+                </div>
+                <button id="menu-btn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#inicio" class="block hover:text-accent transition">Inicio</a>
+                <a href="#sobre-mi" class="block hover:text-accent transition">Sobre Mí</a>
+                <a href="#proyectos" class="block hover:text-accent transition">Proyectos</a>
+                <a href="#experiencia" class="block hover:text-accent transition">Experiencia</a>
+                <a href="#contacto" class="block hover:text-accent transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 relative overflow-hidden">
+        <!-- Blobs animados de fondo -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-primary to-secondary opacity-20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-accent to-warning opacity-20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="inline-block mb-4">
+                        <span class="px-4 py-2 bg-gradient-to-r from-accent to-warning text-white rounded-full text-sm font-semibold">
+                            ⚡ Disponible para proyectos
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+                        <span class="gradient-text">Elías Carrasco</span><br/>
+                        <span class="text-white">Aguayo</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-accent mb-6 font-semibold">
+                        💻 Desarrollador Full Stack Laravel
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        Transformo operaciones manuales en <span class="text-success font-semibold">sistemas digitales eficientes</span>.
+                        Especializado en Laravel, infraestructura TI y automatización de procesos.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#proyectos" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-semibold">
+                            🚀 Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="glass-effect text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all duration-300 font-semibold border-2 border-white/30">
+                            💬 Contactar
+                        </a>
+                    </div>
+                    <div class="flex space-x-6 mt-8">
+                        <a href="https://www.linkedin.com/in/sergio-carrasco" target="_blank" class="text-gray-300 hover:text-primary transition-all duration-300 hover:scale-125">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://github.com/sergiocarrasco" target="_blank" class="text-gray-300 hover:text-secondary transition-all duration-300 hover:scale-125">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="mailto:eliascarrascoaguayo@gmail.com" class="text-gray-300 hover:text-accent transition-all duration-300 hover:scale-125">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                        <div class="relative w-72 h-72 blob bg-gradient-to-br from-primary via-secondary to-accent shadow-2xl flex items-center justify-center">
+                            <span class="text-white text-8xl font-bold">ECA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4">
+                <span class="gradient-text">Sobre Mí</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-12">Conoce más sobre mi trayectoria</p>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-effect p-8 md:p-12 rounded-2xl space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-4xl">👨‍💻</div>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Soy un <span class="text-primary font-semibold">desarrollador Full Stack</span> con especialización en Laravel y sólida experiencia en infraestructura TI.
+                            Mi enfoque se centra en crear soluciones tecnológicas versátiles que transforman operaciones manuales en
+                            sistemas digitales eficientes.
+                        </p>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="text-4xl">📍</div>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Actualmente resido en <span class="text-accent font-semibold">La Coruña, España</span>, y estoy disponible para incorporación inmediata
+                            en modalidad presencial, híbrida o remota. Además de mi experiencia en desarrollo web, poseo conocimientos
+                            en automatización de procesos, herramientas CAD y sistemas GIS.
+                        </p>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="text-4xl">🔐</div>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Actualmente curso una <span class="text-warning font-semibold">especialización en Ciberseguridad</span> (Hack4U - S4vitar), profundizando
+                            en ethical hacking, pentesting y administración de sistemas Linux.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="glass-effect p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl font-bold gradient-text mb-2">5+</div>
+                        <div class="text-gray-400">Proyectos Activos</div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl font-bold gradient-text mb-2">3+</div>
+                        <div class="text-gray-400">Años de Experiencia</div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl font-bold gradient-text mb-2">100%</div>
+                        <div class="text-gray-400">Trabajo Remoto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4">
+                <span class="gradient-text">Proyectos Destacados</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-12">Soluciones que generan impacto real</p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                <!-- Proyecto 1 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover border-2 border-primary/30">
+                    <div class="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/20">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="px-3 py-1 bg-success text-white rounded-full text-xs font-semibold">⚡ 15h ahorro</span>
+                        </div>
+                        <video class="w-full h-full object-cover" controls preload="metadata" muted>
+                            <source src="assets/videos/sistema-insumos.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-white">🏢 Sistema de Solicitud de Insumos</h3>
+                        <p class="text-gray-300 mb-4">
+                            Sistema integral desarrollado con Laravel 12 y MySQL, desplegado en VPS (DigitalOcean).
+                            Automatizó procesos ahorrando 15 horas semanales de trabajo manual.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary border border-primary px-3 py-1 rounded-full text-sm font-semibold">Laravel 12</span>
+                            <span class="bg-secondary/20 text-secondary border border-secondary px-3 py-1 rounded-full text-sm font-semibold">MySQL</span>
+                            <span class="bg-success/20 text-success border border-success px-3 py-1 rounded-full text-sm font-semibold">VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover border-2 border-accent/30">
+                    <div class="relative h-64 bg-gradient-to-br from-accent/20 to-warning/20">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="px-3 py-1 bg-accent text-white rounded-full text-xs font-semibold">🏉 Deportes</span>
+                        </div>
+                        <video class="w-full h-full object-cover" controls preload="metadata" muted>
+                            <source src="assets/videos/analisis-videos.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-white">🎥 Sistema de Análisis de Video Deportivo</h3>
+                        <p class="text-gray-300 mb-4">
+                            Plataforma desarrollada en Laravel 12 para el Club de Rugby Los Troncos,
+                            desplegada en infraestructura VPS propia. Análisis detallado de jugadas y estadísticas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary border border-primary px-3 py-1 rounded-full text-sm font-semibold">Laravel 12</span>
+                            <span class="bg-accent/20 text-accent border border-accent px-3 py-1 rounded-full text-sm font-semibold">Video Processing</span>
+                            <span class="bg-success/20 text-success border border-success px-3 py-1 rounded-full text-sm font-semibold">VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4">
+                <span class="gradient-text">Competencias Técnicas</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-12">Stack tecnológico completo</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Desarrollo -->
+                <div class="glass-effect p-8 rounded-2xl card-hover border border-primary/30">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Desarrollo</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><span class="text-primary mr-2">▸</span> PHP & Laravel 12</li>
+                        <li class="flex items-center"><span class="text-secondary mr-2">▸</span> JavaScript</li>
+                        <li class="flex items-center"><span class="text-accent mr-2">▸</span> Python</li>
+                        <li class="flex items-center"><span class="text-success mr-2">▸</span> SQL</li>
+                        <li class="flex items-center"><span class="text-warning mr-2">▸</span> HTML5 & CSS3</li>
+                        <li class="flex items-center"><span class="text-primary mr-2">▸</span> Bootstrap</li>
+                    </ul>
+                </div>
+
+                <!-- Infraestructura -->
+                <div class="glass-effect p-8 rounded-2xl card-hover border border-secondary/30">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Infraestructura</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><span class="text-primary mr-2">▸</span> VPS (DigitalOcean)</li>
+                        <li class="flex items-center"><span class="text-secondary mr-2">▸</span> Linux & Windows Server</li>
+                        <li class="flex items-center"><span class="text-accent mr-2">▸</span> Apache & Nginx</li>
+                        <li class="flex items-center"><span class="text-success mr-2">▸</span> Docker</li>
+                        <li class="flex items-center"><span class="text-warning mr-2">▸</span> Git</li>
+                    </ul>
+                </div>
+
+                <!-- Bases de Datos -->
+                <div class="glass-effect p-8 rounded-2xl card-hover border border-accent/30">
+                    <div class="text-5xl mb-4">🗄️</div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Bases de Datos</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><span class="text-primary mr-2">▸</span> MySQL</li>
+                        <li class="flex items-center"><span class="text-secondary mr-2">▸</span> PostgreSQL</li>
+                        <li class="flex items-center"><span class="text-accent mr-2">▸</span> SQL Server</li>
+                        <li class="flex items-center"><span class="text-success mr-2">▸</span> phpMyAdmin</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Habilidades Adicionales -->
+            <div class="mt-12 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass-effect p-6 rounded-2xl border border-success/30">
+                        <div class="text-4xl mb-3">⚡</div>
+                        <h4 class="font-bold mb-3 text-xl text-success">Automatización</h4>
+                        <p class="text-gray-300">Python scripting, AutoCAD LISP, QGIS, Macros Excel</p>
+                    </div>
+                    <div class="glass-effect p-6 rounded-2xl border border-warning/30">
+                        <div class="text-4xl mb-3">📐</div>
+                        <h4 class="font-bold mb-3 text-xl text-warning">Diseño & Modelado</h4>
+                        <p class="text-gray-300">AutoCAD 2D/3D, Revit (BIM), 3Ds Max, ArcGIS, QGIS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4">
+                <span class="gradient-text">Experiencia Profesional</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-12">Trayectoria de impacto y resultados</p>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+
+                <!-- Experiencia 1 -->
+                <div class="glass-effect p-6 rounded-2xl border-l-4 border-success card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <h3 class="text-xl font-bold text-white mb-2 md:mb-0">🏢 Administradora de Edificios Millenium SPA</h3>
+                        <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm font-semibold">Mar 2024 - Actualidad</span>
+                    </div>
+                    <p class="text-accent mb-3 font-semibold">Desarrollador Full Stack</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Desarrollo de sistema integral de solicitud de insumos con Laravel 12, MySQL y despliegue en VPS,
+                        automatizando procesos que ahorraron <span class="text-success font-semibold">15 horas semanales</span>. Desarrollo continuo de módulos adicionales.
+                    </p>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="glass-effect p-6 rounded-2xl border-l-4 border-warning card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <h3 class="text-xl font-bold text-white mb-2 md:mb-0">📐 SEREMI de Bienes Nacionales</h3>
+                        <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm font-semibold">May 2024 - Actualidad</span>
+                    </div>
+                    <p class="text-accent mb-3 font-semibold">Desarrollador de Software - Unidad de Catastro</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Sistema web de enumeración automatizada de planos reduciendo tiempo de procesamiento en <span class="text-warning font-semibold">70%</span>.
+                        Automatización de flujos con scripts para QGIS y AutoCAD LISP.
+                    </p>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="glass-effect p-6 rounded-2xl border-l-4 border-accent card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <h3 class="text-xl font-bold text-white mb-2 md:mb-0">🏉 Club de Rugby Los Troncos</h3>
+                        <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-semibold">Jun 2024 - Actualidad</span>
+                    </div>
+                    <p class="text-accent mb-3 font-semibold">Desarrollador Full Stack</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Sistema de análisis de video deportivo desarrollado en Laravel 12, desplegado en infraestructura VPS propia.
+                    </p>
+                </div>
+
+                <!-- Experiencia 4 -->
+                <div class="glass-effect p-6 rounded-2xl border-l-4 border-primary card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <h3 class="text-xl font-bold text-white mb-2 md:mb-0">💼 Chile Digital SPA</h3>
+                        <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-semibold">Dic 2024 - Jun 2025</span>
+                    </div>
+                    <p class="text-accent mb-3 font-semibold">Desarrollador de Software</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Desarrollo de aplicaciones web con Laravel 12, MySQL, JavaScript y Bootstrap.
+                        Diseño, desarrollo y mantención de aplicaciones, gestión y optimización de bases de datos (<span class="text-primary font-semibold">100% remoto</span>).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-purple-900 to-black"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-r from-primary to-accent opacity-20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-secondary to-warning opacity-20 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-bold text-center mb-4">
+                <span class="gradient-text">¡Hablemos!</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-12">Listo para tu próximo proyecto</p>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-effect p-10 rounded-3xl border border-primary/20">
+                    <div class="text-center mb-10">
+                        <div class="inline-block px-6 py-3 bg-gradient-to-r from-success to-primary text-white rounded-full text-lg font-bold mb-4">
+                            ⚡ Disponible para incorporación inmediata
+                        </div>
+                        <p class="text-xl text-gray-300 mb-2">
+                            📍 <span class="font-semibold">La Coruña, España</span>
+                        </p>
+                        <p class="text-gray-400">
+                            Modalidad: <span class="text-accent font-semibold">Presencial</span> •
+                            <span class="text-secondary font-semibold">Híbrida</span> •
+                            <span class="text-success font-semibold">Remota</span>
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <a href="mailto:eliascarrascoaguayo@gmail.com" class="glass-effect p-6 rounded-2xl flex items-center card-hover border border-primary/30 group">
+                            <div class="text-primary text-4xl mr-4 group-hover:scale-125 transition-transform">📧</div>
+                            <div>
+                                <p class="font-bold text-white mb-1">Email</p>
+                                <p class="text-gray-300 text-sm group-hover:text-primary transition">
+                                    eliascarrascoaguayo@gmail.com
+                                </p>
+                            </div>
+                        </a>
+
+                        <div class="glass-effect p-6 rounded-2xl flex items-center border border-accent/30">
+                            <div class="text-accent text-4xl mr-4">📍</div>
+                            <div>
+                                <p class="font-bold text-white mb-1">Ubicación</p>
+                                <p class="text-gray-300 text-sm">La Coruña, España</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.linkedin.com/in/sergio-carrasco" target="_blank" class="glass-effect p-6 rounded-2xl flex items-center card-hover border border-secondary/30 group">
+                            <div class="text-secondary text-4xl mr-4 group-hover:scale-125 transition-transform">💼</div>
+                            <div>
+                                <p class="font-bold text-white mb-1">LinkedIn</p>
+                                <p class="text-gray-300 text-sm group-hover:text-secondary transition">
+                                    Ver perfil profesional
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/sergiocarrasco" target="_blank" class="glass-effect p-6 rounded-2xl flex items-center card-hover border border-warning/30 group">
+                            <div class="text-warning text-4xl mr-4 group-hover:scale-125 transition-transform">💻</div>
+                            <div>
+                                <p class="font-bold text-white mb-1">GitHub</p>
+                                <p class="text-gray-300 text-sm group-hover:text-warning transition">
+                                    Ver repositorios
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mt-10 text-center">
+                        <a href="mailto:eliascarrascoaguayo@gmail.com" class="inline-block bg-gradient-to-r from-primary via-secondary to-accent text-white px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
+                            📩 Enviar Mensaje
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">&copy; 2025 <span class="gradient-text font-bold">Elías Carrasco Aguayo</span>. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#inicio" class="text-gray-400 hover:text-primary transition">Inicio</a>
+                    <a href="#proyectos" class="text-gray-400 hover:text-secondary transition">Proyectos</a>
+                    <a href="#contacto" class="text-gray-400 hover:text-accent transition">Contacto</a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-gray-600 text-sm">💻 Desarrollador Full Stack Laravel | 🌍 La Coruña, España</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para menú móvil -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FORZAR SILENCIO PERMANENTE EN TODOS LOS VIDEOS
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+
+            videos.forEach(video => {
+                // Forzar mute al cargar
+                video.muted = true;
+                video.volume = 0;
+
+                // Prevenir que se active el sonido
+                video.addEventListener('volumechange', function() {
+                    if (!this.muted) {
+                        this.muted = true;
+                    }
+                    if (this.volume > 0) {
+                        this.volume = 0;
+                    }
+                });
+
+                // Asegurar mute antes de reproducir
+                video.addEventListener('play', function() {
+                    this.muted = true;
+                    this.volume = 0;
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
