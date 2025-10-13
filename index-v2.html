@@ -69,9 +69,11 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#inicio" class="hover:text-neon transition-all duration-300 border-b-2 border-transparent hover:border-neon">inicio()</a>
                     <a href="#sobre-mi" class="hover:text-cyan transition-all duration-300 border-b-2 border-transparent hover:border-cyan">sobreMi()</a>
-                    <a href="#proyectos" class="hover:text-magenta transition-all duration-300 border-b-2 border-transparent hover:border-magenta">proyectos()</a>
-                    <a href="#skills" class="hover:text-yellow transition-all duration-300 border-b-2 border-transparent hover:border-yellow">skills()</a>
-                    <a href="#contacto" class="hover:text-neon transition-all duration-300 border-b-2 border-transparent hover:border-neon">contacto()</a>
+                    <a href="#clientes" class="hover:text-magenta transition-all duration-300 border-b-2 border-transparent hover:border-magenta">clientes()</a>
+                    <a href="#servicios" class="hover:text-yellow transition-all duration-300 border-b-2 border-transparent hover:border-yellow">servicios()</a>
+                    <a href="#proyectos" class="hover:text-neon transition-all duration-300 border-b-2 border-transparent hover:border-neon">proyectos()</a>
+                    <a href="#skills" class="hover:text-cyan transition-all duration-300 border-b-2 border-transparent hover:border-cyan">skills()</a>
+                    <a href="#contacto" class="hover:text-magenta transition-all duration-300 border-b-2 border-transparent hover:border-magenta">contacto()</a>
                 </div>
             </div>
         </div>
@@ -165,24 +167,167 @@
         </div>
     </section>
 
+    <!-- Clientes y Colaboraciones -->
+    <section id="clientes" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-4 font-mono text-center">
+                <span class="text-magenta">{'<'}</span>
+                <span class="text-white">Han Confiado en Mí</span>
+                <span class="text-magenta">{' />'}</span>
+            </h2>
+            <p class="text-center text-gray-400 font-mono mb-12">Empresas y organizaciones con las que he colaborado</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                <!-- Cliente 1: Millenium -->
+                <div class="group border-2 border-magenta/50 p-6 bg-black/50 hover:bg-magenta/5 hover:border-magenta transition-all duration-300">
+                    <div class="h-24 mb-4 flex items-center justify-center bg-white/5 rounded-lg overflow-hidden">
+                        <img src="assets/imagenes/millenium.png" alt="Millenium" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-mono mb-2">Administradora Millenium</h3>
+                    <p class="text-gray-400 text-sm">Sistema integral de solicitud de insumos en Laravel</p>
+                </div>
+
+                <!-- Cliente 2: SEREMI -->
+                <div class="group border-2 border-cyan/50 p-6 bg-black/50 hover:bg-cyan/5 hover:border-cyan transition-all duration-300">
+                    <div class="h-24 mb-4 flex items-center justify-center bg-cyan/10 rounded-lg">
+                        <div class="text-4xl font-bold text-cyan font-mono">SEREMI</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-mono mb-2">SEREMI Bienes Nacionales</h3>
+                    <p class="text-gray-400 text-sm">Sistema web para enumeración automatizada de planos</p>
+                </div>
+
+                <!-- Cliente 3: Los Troncos -->
+                <div class="group border-2 border-neon/50 p-6 bg-black/50 hover:bg-neon/5 hover:border-neon transition-all duration-300">
+                    <div class="h-24 mb-4 flex items-center justify-center bg-white/5 rounded-lg overflow-hidden">
+                        <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-mono mb-2">Club Rugby Los Troncos</h3>
+                    <p class="text-gray-400 text-sm">Sistema de análisis de video deportivo</p>
+                </div>
+
+                <!-- Cliente 4: Chile Digital -->
+                <div class="group border-2 border-yellow/50 p-6 bg-black/50 hover:bg-yellow/5 hover:border-yellow transition-all duration-300">
+                    <div class="h-24 mb-4 flex items-center justify-center bg-yellow/10 rounded-lg">
+                        <div class="text-4xl font-bold text-yellow font-mono">CD</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-mono mb-2">Chile Digital SPA</h3>
+                    <p class="text-gray-400 text-sm">Desarrollo y mantención de aplicaciones web Laravel</p>
+                </div>
+
+                <!-- Cliente 5: IAASAM (si es un cliente) -->
+                <div class="group border-2 border-magenta/50 p-6 bg-black/50 hover:bg-magenta/5 hover:border-magenta transition-all duration-300">
+                    <div class="h-24 mb-4 flex items-center justify-center bg-white/5 rounded-lg overflow-hidden">
+                        <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="max-h-full max-w-full object-contain p-2 group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-mono mb-2">IAASAM</h3>
+                    <p class="text-gray-400 text-sm">Desarrollo de soluciones digitales</p>
+                </div>
+
+                <!-- Cliente 6: Hospital -->
+                <div class="group border-2 border-cyan/50 p-6 bg-black/50 hover:bg-cyan/5 hover:border-cyan transition-all duration-300">
+                    <div class="h-24 mb-4 flex items-center justify-center bg-cyan/10 rounded-lg">
+                        <div class="text-4xl font-bold text-cyan font-mono">HCS</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-mono mb-2">Hospital Clínico del Sur</h3>
+                    <p class="text-gray-400 text-sm">Soporte informático y desarrollo de sistemas internos</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 relative bg-gradient-to-b from-transparent to-black/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-4 font-mono text-center">
+                <span class="text-yellow">{'<'}</span>
+                <span class="text-white">Servicios</span>
+                <span class="text-yellow">{' />'}</span>
+            </h2>
+            <p class="text-center text-gray-400 font-mono mb-12">Soluciones tecnológicas que ofrezco</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                <!-- Servicio 1 -->
+                <div class="cyber-border p-8 bg-black/80 hover:bg-neon/5 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">📦</div>
+                    <h3 class="text-xl font-bold text-neon font-mono mb-3">Desarrollo Web Laravel</h3>
+                    <p class="text-gray-400 text-sm">Aplicaciones web robustas y escalables con Laravel, MySQL y mejores prácticas</p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="cyber-border p-8 bg-black/80 hover:bg-cyan/5 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🔧</div>
+                    <h3 class="text-xl font-bold text-cyan font-mono mb-3">Soporte Técnico IT</h3>
+                    <p class="text-gray-400 text-sm">Administración de sistemas, resolución de problemas y gestión de infraestructura</p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="cyber-border p-8 bg-black/80 hover:bg-magenta/5 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">⚙️</div>
+                    <h3 class="text-xl font-bold text-magenta font-mono mb-3">Automatización de Procesos</h3>
+                    <p class="text-gray-400 text-sm">Scripts personalizados, workflows automatizados y optimización operativa</p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="cyber-border p-8 bg-black/80 hover:bg-yellow/5 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🗄️</div>
+                    <h3 class="text-xl font-bold text-yellow font-mono mb-3">Gestión de Bases de Datos</h3>
+                    <p class="text-gray-400 text-sm">Diseño, optimización y administración de bases de datos MySQL y PostgreSQL</p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="cyber-border p-8 bg-black/80 hover:bg-neon/5 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">☁️</div>
+                    <h3 class="text-xl font-bold text-neon font-mono mb-3">Despliegue en VPS</h3>
+                    <p class="text-gray-400 text-sm">Configuración, deploy y mantenimiento de aplicaciones en servidores VPS</p>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="cyber-border p-8 bg-black/80 hover:bg-cyan/5 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+                    <h3 class="text-xl font-bold text-cyan font-mono mb-3">Consultoría Técnica</h3>
+                    <p class="text-gray-400 text-sm">Asesoría en arquitectura de software, stack tecnológico y mejores prácticas</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Proyectos -->
     <section id="proyectos" class="py-20 relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-12 font-mono">
+            <h2 class="text-5xl font-bold mb-8 font-mono">
                 <span class="text-magenta">{'<'}</span>
                 <span class="text-white">Proyectos</span>
                 <span class="text-magenta">{' />'}</span>
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <!-- Filtros -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button data-filter="todos" class="filter-btn active border-2 border-neon px-6 py-2 font-mono bg-neon/20 text-neon hover:bg-neon/30 transition-all duration-300">
+                    [TODOS]
+                </button>
+                <button data-filter="sistemas" class="filter-btn border-2 border-cyan px-6 py-2 font-mono bg-black text-cyan hover:bg-cyan/20 transition-all duration-300">
+                    [SISTEMAS_WEB]
+                </button>
+                <button data-filter="landing" class="filter-btn border-2 border-magenta px-6 py-2 font-mono bg-black text-magenta hover:bg-magenta/20 transition-all duration-300">
+                    [LANDING_PAGES]
+                </button>
+            </div>
 
-                <!-- Proyecto 1 -->
-                <div class="group relative">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- SISTEMAS WEB -->
+
+                <!-- Sistema 1 -->
+                <div class="project-card lg:col-span-2 group relative" data-category="sistemas">
                     <div class="absolute inset-0 bg-gradient-to-r from-neon to-cyan opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
-                    <div class="cyber-border p-6 bg-black relative">
+                    <div class="cyber-border p-6 bg-black relative h-full">
                         <div class="flex justify-between items-start mb-4">
                             <span class="font-mono text-neon">[01]</span>
-                            <span class="px-3 py-1 bg-neon/20 text-neon text-xs font-mono">LARAVEL</span>
+                            <span class="px-3 py-1 bg-neon/20 text-neon text-xs font-mono">🚀 SISTEMA</span>
                         </div>
 
                         <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
@@ -203,13 +348,13 @@
                     </div>
                 </div>
 
-                <!-- Proyecto 2 -->
-                <div class="group relative">
+                <!-- Sistema 2 -->
+                <div class="project-card lg:col-span-1 group relative" data-category="sistemas">
                     <div class="absolute inset-0 bg-gradient-to-r from-magenta to-yellow opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
-                    <div class="cyber-border p-6 bg-black relative">
+                    <div class="cyber-border p-6 bg-black relative h-full">
                         <div class="flex justify-between items-start mb-4">
                             <span class="font-mono text-magenta">[02]</span>
-                            <span class="px-3 py-1 bg-magenta/20 text-magenta text-xs font-mono">VIDEO</span>
+                            <span class="px-3 py-1 bg-magenta/20 text-magenta text-xs font-mono">🚀 SISTEMA</span>
                         </div>
 
                         <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
@@ -220,12 +365,232 @@
 
                         <h3 class="text-xl font-bold mb-3 font-mono text-white">Análisis Video Deportivo</h3>
                         <p class="text-gray-400 mb-4 text-sm">
-                            Plataforma Laravel 12 para Club de Rugby Los Troncos. Análisis detallado de jugadas y estadísticas en VPS.
+                            Plataforma Laravel 12 para Club de Rugby Los Troncos. VPS propio.
                         </p>
                         <div class="flex gap-2 font-mono text-xs">
                             <span class="text-magenta">#Laravel</span>
-                            <span class="text-yellow">#VideoProcessing</span>
+                            <span class="text-yellow">#Video</span>
                             <span class="text-neon">#VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LANDING PAGES -->
+                <!-- 🔔 REEMPLAZA LAS IMÁGENES PLACEHOLDER CON TUS SCREENSHOTS REALES -->
+
+                <!-- Landing 1 -->
+                <div class="project-card group relative" data-category="landing">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan to-neon opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="border-2 border-yellow p-6 bg-black relative h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-yellow">[03]</span>
+                            <span class="px-3 py-1 bg-yellow/20 text-yellow text-xs font-mono">🎨 LANDING</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden group/img">
+                            <!-- 🔔 REEMPLAZA: src="assets/img/landing-1.jpg" -->
+                            <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Landing+Page+1"
+                                 alt="Landing Page 1"
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+
+                            <!-- Overlay hover -->
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
+                                <!-- 🔔 REEMPLAZA: href con tu URL real -->
+                                <a href="#" target="_blank"
+                                   class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
+                                    {'>'} VER_SITIO
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-2 font-mono text-white">Restaurante</h3>
+                        <p class="text-gray-400 mb-3 text-xs">
+                            Landing responsiva con menú interactivo y reservas.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-yellow">#HTML</span>
+                            <span class="text-cyan">#CSS</span>
+                            <span class="text-magenta">#JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing 2 -->
+                <div class="project-card group relative" data-category="landing">
+                    <div class="absolute inset-0 bg-gradient-to-r from-magenta to-cyan opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="border-2 border-yellow p-6 bg-black relative h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-yellow">[04]</span>
+                            <span class="px-3 py-1 bg-yellow/20 text-yellow text-xs font-mono">🎨 LANDING</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden group/img">
+                            <!-- 🔔 REEMPLAZA: src="assets/img/landing-2.jpg" -->
+                            <img src="https://via.placeholder.com/600x400/f093fb/ffffff?text=Landing+Page+2"
+                                 alt="Landing Page 2"
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
+                                <!-- 🔔 REEMPLAZA: href con tu URL real -->
+                                <a href="#" target="_blank"
+                                   class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
+                                    {'>'} VER_SITIO
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-2 font-mono text-white">Estudio Legal</h3>
+                        <p class="text-gray-400 mb-3 text-xs">
+                            Sitio profesional con formulario y áreas de práctica.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-yellow">#HTML</span>
+                            <span class="text-cyan">#CSS</span>
+                            <span class="text-neon">#Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing 3 -->
+                <div class="project-card group relative" data-category="landing">
+                    <div class="absolute inset-0 bg-gradient-to-r from-yellow to-magenta opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="border-2 border-yellow p-6 bg-black relative h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-yellow">[05]</span>
+                            <span class="px-3 py-1 bg-yellow/20 text-yellow text-xs font-mono">🎨 LANDING</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden group/img">
+                            <!-- 🔔 REEMPLAZA: src="assets/img/landing-3.jpg" -->
+                            <img src="https://via.placeholder.com/600x400/4facfe/ffffff?text=Landing+Page+3"
+                                 alt="Landing Page 3"
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
+                                <!-- 🔔 REEMPLAZA: href con tu URL real -->
+                                <a href="#" target="_blank"
+                                   class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
+                                    {'>'} VER_SITIO
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-2 font-mono text-white">Agencia Viajes</h3>
+                        <p class="text-gray-400 mb-3 text-xs">
+                            Landing moderna con galería y cotizador.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-yellow">#HTML</span>
+                            <span class="text-cyan">#CSS</span>
+                            <span class="text-magenta">#JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing 4 -->
+                <div class="project-card group relative" data-category="landing">
+                    <div class="absolute inset-0 bg-gradient-to-r from-neon to-yellow opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="border-2 border-yellow p-6 bg-black relative h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-yellow">[06]</span>
+                            <span class="px-3 py-1 bg-yellow/20 text-yellow text-xs font-mono">🎨 LANDING</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden group/img">
+                            <!-- 🔔 REEMPLAZA: src="assets/img/landing-4.jpg" -->
+                            <img src="https://via.placeholder.com/600x400/43e97b/ffffff?text=Landing+Page+4"
+                                 alt="Landing Page 4"
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
+                                <!-- 🔔 REEMPLAZA: href con tu URL real -->
+                                <a href="#" target="_blank"
+                                   class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
+                                    {'>'} VER_SITIO
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-2 font-mono text-white">Gimnasio FitZone</h3>
+                        <p class="text-gray-400 mb-3 text-xs">
+                            Landing con planes de membresía y horarios.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-yellow">#HTML</span>
+                            <span class="text-cyan">#CSS</span>
+                            <span class="text-neon">#Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing 5 -->
+                <div class="project-card group relative" data-category="landing">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan to-magenta opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="border-2 border-yellow p-6 bg-black relative h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-yellow">[07]</span>
+                            <span class="px-3 py-1 bg-yellow/20 text-yellow text-xs font-mono">🎨 LANDING</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden group/img">
+                            <!-- 🔔 REEMPLAZA: src="assets/img/landing-5.jpg" -->
+                            <img src="https://via.placeholder.com/600x400/fa709a/ffffff?text=Landing+Page+5"
+                                 alt="Landing Page 5"
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
+                                <!-- 🔔 REEMPLAZA: href con tu URL real -->
+                                <a href="#" target="_blank"
+                                   class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
+                                    {'>'} VER_SITIO
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-2 font-mono text-white">Cafetería</h3>
+                        <p class="text-gray-400 mb-3 text-xs">
+                            Landing elegante con menú digital y galería.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-yellow">#HTML</span>
+                            <span class="text-cyan">#CSS</span>
+                            <span class="text-magenta">#JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing 6 -->
+                <div class="project-card group relative" data-category="landing">
+                    <div class="absolute inset-0 bg-gradient-to-r from-magenta to-neon opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+                    <div class="border-2 border-yellow p-6 bg-black relative h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-mono text-yellow">[08]</span>
+                            <span class="px-3 py-1 bg-yellow/20 text-yellow text-xs font-mono">🎨 LANDING</span>
+                        </div>
+
+                        <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden group/img">
+                            <!-- 🔔 REEMPLAZA: src="assets/img/landing-6.jpg" -->
+                            <img src="https://via.placeholder.com/600x400/fee140/333333?text=Landing+Page+6"
+                                 alt="Landing Page 6"
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
+                                <!-- 🔔 REEMPLAZA: href con tu URL real -->
+                                <a href="#" target="_blank"
+                                   class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
+                                    {'>'} VER_SITIO
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-2 font-mono text-white">Startup Tech</h3>
+                        <p class="text-gray-400 mb-3 text-xs">
+                            Landing corporativa minimalista y moderna.
+                        </p>
+                        <div class="flex gap-2 font-mono text-xs">
+                            <span class="text-yellow">#HTML</span>
+                            <span class="text-cyan">#CSS</span>
+                            <span class="text-neon">#Tailwind</span>
                         </div>
                     </div>
                 </div>
@@ -383,8 +748,10 @@
                 </div>
                 <div class="flex gap-6 font-mono text-sm">
                     <a href="#inicio" class="text-gray-500 hover:text-neon transition">inicio()</a>
+                    <a href="#clientes" class="text-gray-500 hover:text-magenta transition">clientes()</a>
+                    <a href="#servicios" class="text-gray-500 hover:text-yellow transition">servicios()</a>
                     <a href="#proyectos" class="text-gray-500 hover:text-cyan transition">proyectos()</a>
-                    <a href="#contacto" class="text-gray-500 hover:text-magenta transition">contacto()</a>
+                    <a href="#contacto" class="text-gray-500 hover:text-neon transition">contacto()</a>
                 </div>
             </div>
         </div>
@@ -392,6 +759,64 @@
 
     <!-- JavaScript -->
     <script>
+        // SISTEMA DE FILTROS DE PROYECTOS
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Actualizar estado activo de botones
+                    filterButtons.forEach(btn => {
+                        if (btn === this) {
+                            // Botón activo
+                            if (filter === 'todos') {
+                                btn.classList.add('bg-neon/20', 'text-neon', 'border-neon');
+                                btn.classList.remove('bg-black', 'text-cyan', 'border-cyan', 'text-magenta', 'border-magenta');
+                            } else if (filter === 'sistemas') {
+                                btn.classList.add('bg-cyan/20', 'text-cyan', 'border-cyan');
+                                btn.classList.remove('bg-black', 'text-neon', 'border-neon', 'text-magenta', 'border-magenta');
+                            } else if (filter === 'landing') {
+                                btn.classList.add('bg-magenta/20', 'text-magenta', 'border-magenta');
+                                btn.classList.remove('bg-black', 'text-neon', 'border-neon', 'text-cyan', 'border-cyan');
+                            }
+                        } else {
+                            // Botones inactivos
+                            btn.classList.add('bg-black');
+                            btn.classList.remove('bg-neon/20', 'bg-cyan/20', 'bg-magenta/20');
+
+                            // Restaurar color original del botón
+                            const btnFilter = btn.getAttribute('data-filter');
+                            if (btnFilter === 'todos') {
+                                btn.classList.add('text-neon', 'border-neon');
+                                btn.classList.remove('text-cyan', 'border-cyan', 'text-magenta', 'border-magenta');
+                            } else if (btnFilter === 'sistemas') {
+                                btn.classList.add('text-cyan', 'border-cyan');
+                                btn.classList.remove('text-neon', 'border-neon', 'text-magenta', 'border-magenta');
+                            } else if (btnFilter === 'landing') {
+                                btn.classList.add('text-magenta', 'border-magenta');
+                                btn.classList.remove('text-neon', 'border-neon', 'text-cyan', 'border-cyan');
+                            }
+                        }
+                    });
+
+                    // Filtrar proyectos con animación
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+
+                        if (filter === 'todos' || filter === category) {
+                            card.style.display = 'block';
+                            card.style.animation = 'float 0.5s ease-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
         // FORZAR SILENCIO PERMANENTE EN TODOS LOS VIDEOS
         document.addEventListener('DOMContentLoaded', function() {
             const videos = document.querySelectorAll('video');
