@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elías Carrasco Aguayo - Desarrollador Full Stack Laravel</title>
+
+    <!-- Preconnect para acelerar carga de CDN -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -53,6 +56,17 @@
             width: 40px;
             height: 4px;
             background: #ff00e5;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .logos-slider {
+            display: flex;
+            animation: scroll-left 30s linear infinite;
+        }
+        .logos-slider:hover {
+            animation-play-state: paused;
         }
     </style>
 </head>
@@ -162,24 +176,52 @@
                     </div>
                 </div>
 
-                <!-- Logos de Clientes -->
-                <div class="mt-12 pt-8 border-t border-gray-800">
-                    <p class="text-center text-gray-500 font-mono text-sm mb-6">Han confiado en mí:</p>
-                    <div class="flex flex-wrap justify-center items-center gap-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
-                        <div class="h-12 w-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="assets/imagenes/millenium.png" alt="Millenium" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="h-12 w-24 flex items-center justify-center">
-                            <div class="text-lg font-bold text-gray-600 font-mono">SEREMI</div>
-                        </div>
-                        <div class="h-12 w-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="h-12 w-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="h-12 w-24 flex items-center justify-center">
-                            <div class="text-lg font-bold text-gray-600 font-mono">Chile Digital</div>
+                <!-- Logos de Clientes - Banda Infinita -->
+                <div class="mt-12 pt-8 border-t border-gray-800 md:col-span-2">
+                    <p class="text-center text-gray-400 font-mono text-lg mb-8 font-semibold">Han confiado en mí:</p>
+
+                    <!-- Contenedor con overflow hidden -->
+                    <div class="overflow-hidden relative">
+                        <div class="logos-slider gap-12">
+                            <!-- Set 1 de logos -->
+                            <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="assets/imagenes/millenium.png" alt="Millenium" class="h-12 w-auto object-contain">
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px]">
+                                <div class="text-2xl font-bold text-gray-600 font-mono">SEREMI</div>
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="h-12 w-auto object-contain">
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="h-12 w-auto object-contain">
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px]">
+                                <div class="text-2xl font-bold text-gray-600 font-mono">Chile Digital</div>
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px]">
+                                <div class="text-2xl font-bold text-gray-700 font-mono">Hospital Clínico</div>
+                            </div>
+
+                            <!-- Set 2 de logos (duplicado para efecto infinito) -->
+                            <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="assets/imagenes/millenium.png" alt="Millenium" class="h-12 w-auto object-contain">
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px]">
+                                <div class="text-2xl font-bold text-gray-600 font-mono">SEREMI</div>
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="h-12 w-auto object-contain">
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="h-12 w-auto object-contain">
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px]">
+                                <div class="text-2xl font-bold text-gray-600 font-mono">Chile Digital</div>
+                            </div>
+                            <div class="flex items-center justify-center min-w-[150px]">
+                                <div class="text-2xl font-bold text-gray-700 font-mono">Hospital Clínico</div>
+                            </div>
                         </div>
                     </div>
                 </div>
