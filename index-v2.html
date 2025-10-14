@@ -38,24 +38,153 @@
             position: relative;
             border: 2px solid #00ff9d;
             box-shadow: 0 0 10px #00ff9d, inset 0 0 10px rgba(0, 255, 157, 0.1);
+            overflow: hidden;
+        }
+        @keyframes border-slide-cyan {
+            0% {
+                top: -4px;
+                left: 0%;
+                right: auto;
+                bottom: auto;
+                width: 40px;
+                height: 4px;
+            }
+            25% {
+                top: -4px;
+                left: auto;
+                right: 0%;
+                bottom: auto;
+                width: 40px;
+                height: 4px;
+            }
+            25.01% {
+                top: 0%;
+                right: -4px;
+                bottom: auto;
+                left: auto;
+                width: 4px;
+                height: 40px;
+            }
+            50% {
+                top: auto;
+                right: -4px;
+                bottom: 0%;
+                left: auto;
+                width: 4px;
+                height: 40px;
+            }
+            50.01% {
+                top: auto;
+                right: 0%;
+                bottom: -4px;
+                left: auto;
+                width: 40px;
+                height: 4px;
+            }
+            75% {
+                top: auto;
+                right: auto;
+                bottom: -4px;
+                left: 0%;
+                width: 40px;
+                height: 4px;
+            }
+            75.01% {
+                top: 0%;
+                right: auto;
+                bottom: auto;
+                left: -4px;
+                width: 4px;
+                height: 40px;
+            }
+            100% {
+                top: 0%;
+                right: auto;
+                bottom: auto;
+                left: -4px;
+                width: 4px;
+                height: 40px;
+            }
+        }
+        @keyframes border-slide-magenta {
+            0% {
+                top: auto;
+                left: auto;
+                right: 0%;
+                bottom: -4px;
+                width: 40px;
+                height: 4px;
+            }
+            25% {
+                top: auto;
+                left: 0%;
+                right: auto;
+                bottom: -4px;
+                width: 40px;
+                height: 4px;
+            }
+            25.01% {
+                top: auto;
+                left: -4px;
+                right: auto;
+                bottom: 0%;
+                width: 4px;
+                height: 40px;
+            }
+            50% {
+                top: 0%;
+                left: -4px;
+                right: auto;
+                bottom: auto;
+                width: 4px;
+                height: 40px;
+            }
+            50.01% {
+                top: -4px;
+                left: 0%;
+                right: auto;
+                bottom: auto;
+                width: 40px;
+                height: 4px;
+            }
+            75% {
+                top: -4px;
+                left: auto;
+                right: 0%;
+                bottom: auto;
+                width: 40px;
+                height: 4px;
+            }
+            75.01% {
+                top: 0%;
+                left: auto;
+                right: -4px;
+                bottom: auto;
+                width: 4px;
+                height: 40px;
+            }
+            100% {
+                top: auto;
+                left: auto;
+                right: -4px;
+                bottom: 0%;
+                width: 4px;
+                height: 40px;
+            }
         }
         .cyber-border::before {
             content: '';
             position: absolute;
-            top: -4px;
-            left: 20px;
-            width: 40px;
-            height: 4px;
             background: #00f0ff;
+            box-shadow: 0 0 10px #00f0ff;
+            animation: border-slide-cyan 4s linear infinite;
         }
         .cyber-border::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            right: 20px;
-            width: 40px;
-            height: 4px;
             background: #ff00e5;
+            box-shadow: 0 0 10px #ff00e5;
+            animation: border-slide-magenta 4s linear infinite;
         }
         @keyframes scroll-left {
             0% { transform: translateX(0); }
