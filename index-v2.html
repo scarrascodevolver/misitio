@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elías Carrasco Aguayo - Desarrollador Full Stack Laravel</title>
+    <meta name="description" content="Full Stack Developer especializado en Laravel, PHP y MySQL. Desarrollo aplicaciones web robustas, automatización de procesos y consultoría técnica desde La Coruña, España.">
+    <meta name="keywords" content="desarrollador full stack, Laravel, PHP, MySQL, desarrollo web, La Coruña, España, programador, VPS, automatización">
+    <meta name="author" content="Elías Carrasco Aguayo">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliascarrasco.dev/">
+    <meta property="og:title" content="Elías Carrasco Aguayo - Desarrollador Full Stack Laravel">
+    <meta property="og:description" content="Full Stack Developer especializado en Laravel, PHP y MySQL. Desarrollo aplicaciones web robustas y automatización de procesos.">
+    <meta property="og:image" content="https://eliascarrasco.dev/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eliascarrasco.dev/">
+    <meta property="twitter:title" content="Elías Carrasco Aguayo - Desarrollador Full Stack Laravel">
+    <meta property="twitter:description" content="Full Stack Developer especializado en Laravel, PHP y MySQL.">
+    <meta property="twitter:image" content="https://eliascarrasco.dev/assets/og-image.jpg">
 
     <!-- Preconnect para acelerar carga de CDN -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -65,10 +82,10 @@
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 0.1rem;
-            transition: 0.2s;
+            transition: all 0.2s ease;
+            display: inline-block;
         }
         .neon-btn:hover {
-            letter-spacing: 0.2rem;
             background: #00ff9d;
             color: #00ff9d;
             animation: neon-glow 3s infinite;
@@ -151,12 +168,15 @@
             display: flex;
             animation: scroll-left 30s linear infinite;
         }
+        .hero-blob-delayed {
+            animation-delay: 1s;
+        }
     </style>
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
     <!-- Grid background -->
-    <div class="fixed inset-0 bg-[linear-gradient(rgba(0,255,157,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,157,0.03)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
+    <div aria-hidden="true" class="fixed inset-0 bg-[linear-gradient(rgba(0,255,157,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,157,0.03)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
 
     <!-- Navegación -->
     <nav class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b-2 border-neon/30">
@@ -176,8 +196,8 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="min-h-screen flex items-center relative pt-20">
-        <div class="absolute top-20 right-20 w-64 h-64 bg-neon/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-20 left-20 w-64 h-64 bg-cyan/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div aria-hidden="true" class="absolute top-20 right-20 w-64 h-64 bg-neon/20 rounded-full blur-3xl animate-pulse"></div>
+        <div aria-hidden="true" class="absolute bottom-20 left-20 w-64 h-64 bg-cyan/20 rounded-full blur-3xl animate-pulse hero-blob-delayed"></div>
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl">
@@ -191,16 +211,16 @@
 
                 <div class="ml-8 mb-6">
                     <p class="font-mono text-xl text-cyan mb-2">
-                        <span class="text-gray-500">role:</span> <span className="text-white">"Full Stack Developer"</span>,
+                        <span class="text-gray-500">role:</span> <span class="text-white">"Full Stack Developer"</span>,
                     </p>
                     <p class="font-mono text-xl text-magenta mb-2">
-                        <span class="text-gray-500">stack:</span> <span className="text-white">["Laravel", "PHP", "MySQL"]</span>,
+                        <span class="text-gray-500">stack:</span> <span class="text-white">["Laravel", "PHP", "MySQL"]</span>,
                     </p>
                     <p class="font-mono text-xl text-yellow mb-2">
-                        <span class="text-gray-500">location:</span> <span className="text-white">"La Coruña, España"</span>,
+                        <span class="text-gray-500">location:</span> <span class="text-white">"La Coruña, España"</span>,
                     </p>
                     <p class="font-mono text-xl text-neon">
-                        <span class="text-gray-500">status:</span> <span className="text-white">"Available for hire"</span>
+                        <span class="text-gray-500">status:</span> <span class="text-white">"Available for hire"</span>
                     </p>
                 </div>
 
@@ -275,16 +295,16 @@
                 <div class="logos-slider gap-16">
                             <!-- Set 1 de logos -->
                             <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                                <img src="assets/imagenes/millenium.png" alt="Millenium" class="h-12 w-auto object-contain">
+                                <img src="assets/imagenes/millenium.png" alt="Millenium" class="h-12 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="flex items-center justify-center min-w-[150px]">
                                 <div class="text-2xl font-bold text-gray-600 font-mono">SEREMI</div>
                             </div>
                             <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                                <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="h-12 w-auto object-contain">
+                                <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="h-12 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                                <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="h-12 w-auto object-contain">
+                                <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="h-12 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="flex items-center justify-center min-w-[150px]">
                                 <div class="text-2xl font-bold text-gray-600 font-mono">Chile Digital</div>
@@ -295,16 +315,16 @@
 
                             <!-- Set 2 de logos (duplicado para efecto infinito) -->
                             <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                                <img src="assets/imagenes/millenium.png" alt="Millenium" class="h-12 w-auto object-contain">
+                                <img src="assets/imagenes/millenium.png" alt="Millenium" class="h-12 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="flex items-center justify-center min-w-[150px]">
                                 <div class="text-2xl font-bold text-gray-600 font-mono">SEREMI</div>
                             </div>
                             <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                                <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="h-12 w-auto object-contain">
+                                <img src="assets/imagenes/videos-equipo.png" alt="Los Troncos" class="h-12 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="flex items-center justify-center min-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                                <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="h-12 w-auto object-contain">
+                                <img src="assets/imagenes/iaasam.png" alt="IAASAM" class="h-12 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="flex items-center justify-center min-w-[150px]">
                                 <div class="text-2xl font-bold text-gray-600 font-mono">Chile Digital</div>
@@ -411,8 +431,9 @@
                         </div>
 
                         <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
-                            <video class="w-full h-full object-cover" controls preload="metadata" muted>
+                            <video class="w-full h-full object-cover" controls preload="metadata" muted aria-label="Demo del Sistema de Solicitud de Insumos">
                                 <source src="assets/videos/sistema-insumos.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
 
@@ -438,8 +459,9 @@
                         </div>
 
                         <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
-                            <video class="w-full h-full object-cover" controls preload="metadata" muted>
+                            <video class="w-full h-full object-cover" controls preload="metadata" muted aria-label="Demo del Sistema de Análisis de Video Deportivo">
                                 <source src="assets/videos/analisis-videos.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
 
@@ -471,12 +493,13 @@
                             <!-- 🔔 REEMPLAZA: src="assets/img/landing-1.jpg" -->
                             <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Landing+Page+1"
                                  alt="Landing Page 1"
-                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                 loading="lazy">
 
                             <!-- Overlay hover -->
                             <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                                 <!-- 🔔 REEMPLAZA: href con tu URL real -->
-                                <a href="#" target="_blank"
+                                <a href="#" target="_blank" rel="noopener noreferrer"
                                    class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
                                     {'>'} VER_SITIO
                                 </a>
@@ -508,11 +531,12 @@
                             <!-- 🔔 REEMPLAZA: src="assets/img/landing-2.jpg" -->
                             <img src="https://via.placeholder.com/600x400/f093fb/ffffff?text=Landing+Page+2"
                                  alt="Landing Page 2"
-                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                 loading="lazy">
 
                             <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                                 <!-- 🔔 REEMPLAZA: href con tu URL real -->
-                                <a href="#" target="_blank"
+                                <a href="#" target="_blank" rel="noopener noreferrer"
                                    class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
                                     {'>'} VER_SITIO
                                 </a>
@@ -544,11 +568,12 @@
                             <!-- 🔔 REEMPLAZA: src="assets/img/landing-3.jpg" -->
                             <img src="https://via.placeholder.com/600x400/4facfe/ffffff?text=Landing+Page+3"
                                  alt="Landing Page 3"
-                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                 loading="lazy">
 
                             <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                                 <!-- 🔔 REEMPLAZA: href con tu URL real -->
-                                <a href="#" target="_blank"
+                                <a href="#" target="_blank" rel="noopener noreferrer"
                                    class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
                                     {'>'} VER_SITIO
                                 </a>
@@ -580,11 +605,12 @@
                             <!-- 🔔 REEMPLAZA: src="assets/img/landing-4.jpg" -->
                             <img src="https://via.placeholder.com/600x400/43e97b/ffffff?text=Landing+Page+4"
                                  alt="Landing Page 4"
-                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                 loading="lazy">
 
                             <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                                 <!-- 🔔 REEMPLAZA: href con tu URL real -->
-                                <a href="#" target="_blank"
+                                <a href="#" target="_blank" rel="noopener noreferrer"
                                    class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
                                     {'>'} VER_SITIO
                                 </a>
@@ -616,11 +642,12 @@
                             <!-- 🔔 REEMPLAZA: src="assets/img/landing-5.jpg" -->
                             <img src="https://via.placeholder.com/600x400/fa709a/ffffff?text=Landing+Page+5"
                                  alt="Landing Page 5"
-                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                 loading="lazy">
 
                             <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                                 <!-- 🔔 REEMPLAZA: href con tu URL real -->
-                                <a href="#" target="_blank"
+                                <a href="#" target="_blank" rel="noopener noreferrer"
                                    class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
                                     {'>'} VER_SITIO
                                 </a>
@@ -652,11 +679,12 @@
                             <!-- 🔔 REEMPLAZA: src="assets/img/landing-6.jpg" -->
                             <img src="https://via.placeholder.com/600x400/fee140/333333?text=Landing+Page+6"
                                  alt="Landing Page 6"
-                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500">
+                                 class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                 loading="lazy">
 
                             <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover/img:opacity-100">
                                 <!-- 🔔 REEMPLAZA: href con tu URL real -->
-                                <a href="#" target="_blank"
+                                <a href="#" target="_blank" rel="noopener noreferrer"
                                    class="border-2 border-neon px-4 py-2 font-mono text-neon hover:bg-neon/20 transition-all">
                                     {'>'} VER_SITIO
                                 </a>
@@ -692,7 +720,7 @@
                 <div class="cyber-border p-12 bg-black/50">
                     <div class="text-center mb-12">
                         <div class="inline-block px-6 py-2 border-2 border-neon bg-neon/10 font-mono mb-6">
-                            <span className="text-neon">STATUS: AVAILABLE</span>
+                            <span class="text-neon">STATUS: AVAILABLE</span>
                         </div>
                         <p class="text-2xl text-gray-300 font-mono">
                             La Coruña, España | Presencial • Híbrido • Remoto
@@ -705,12 +733,12 @@
                             <div class="text-gray-400 text-sm break-all">eliascarrascoaguayo@gmail.com</div>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/sergio-carrasco" target="_blank" class="border-2 border-magenta p-6 hover:bg-magenta/10 transition-all duration-300 group">
+                        <a href="https://www.linkedin.com/in/elias-carrasco-aguayo" target="_blank" rel="noopener noreferrer" class="border-2 border-magenta p-6 hover:bg-magenta/10 transition-all duration-300 group">
                             <div class="font-mono text-magenta mb-2 group-hover:text-white">{'>'} LINKEDIN</div>
                             <div class="text-gray-400 text-sm">Ver perfil profesional</div>
                         </a>
 
-                        <a href="https://github.com/sergiocarrasco" target="_blank" class="border-2 border-yellow p-6 hover:bg-yellow/10 transition-all duration-300 group">
+                        <a href="https://github.com/eliascarrasco" target="_blank" rel="noopener noreferrer" class="border-2 border-yellow p-6 hover:bg-yellow/10 transition-all duration-300 group">
                             <div class="font-mono text-yellow mb-2 group-hover:text-white">{'>'} GITHUB</div>
                             <div class="text-gray-400 text-sm">Ver repositorios</div>
                         </a>
