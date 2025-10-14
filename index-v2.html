@@ -38,7 +38,6 @@
             position: relative;
             border: 2px solid #00ff9d;
             box-shadow: 0 0 10px #00ff9d, inset 0 0 10px rgba(0, 255, 157, 0.1);
-            overflow: hidden;
         }
         @keyframes border-slide-cyan {
             0% {
@@ -178,6 +177,7 @@
             background: #00f0ff;
             box-shadow: 0 0 10px #00f0ff;
             animation: border-slide-cyan 4s linear infinite;
+            z-index: 10;
         }
         .cyber-border::after {
             content: '';
@@ -185,6 +185,7 @@
             background: #ff00e5;
             box-shadow: 0 0 10px #ff00e5;
             animation: border-slide-magenta 4s linear infinite;
+            z-index: 10;
         }
         @keyframes scroll-left {
             0% { transform: translateX(0); }
