@@ -510,10 +510,13 @@
                         </div>
 
                         <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
-                            <video class="w-full h-full object-cover" controls preload="metadata" muted poster="assets/paginas/sis_millenium.png" aria-label="Demo del Sistema de Solicitud de Insumos">
+                            <video id="video-sistema-insumos" class="w-full h-full object-cover" controls preload="metadata" muted poster="assets/paginas/sis_millenium.png" aria-label="Demo del Sistema de Solicitud de Insumos">
                                 <source src="assets/videos/sistema-insumos.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
+                            <audio id="audio-sistema-insumos" preload="metadata" style="display: none;">
+                                <source src="assets/videos/sistema-insumos.mp3" type="audio/mpeg">
+                            </audio>
                         </div>
 
                         <h3 class="text-xl font-bold mb-3 font-mono text-white">Sistema Solicitud Insumos</h3>
@@ -538,10 +541,13 @@
                         </div>
 
                         <div class="h-48 bg-gray-900 mb-4 relative overflow-hidden">
-                            <video class="w-full h-full object-cover" controls preload="metadata" muted poster="assets/paginas/troncos.png" aria-label="Demo del Sistema de Análisis de Video Deportivo">
+                            <video id="video-analisis-videos" class="w-full h-full object-cover" controls preload="metadata" muted poster="assets/paginas/troncos.png" aria-label="Demo del Sistema de Análisis de Video Deportivo">
                                 <source src="assets/videos/analisis-videos.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
+                            <audio id="audio-analisis-videos" preload="metadata" style="display: none;">
+                                <source src="assets/videos/analisis-videos.mp3" type="audio/mpeg">
+                            </audio>
                         </div>
 
                         <h3 class="text-xl font-bold mb-3 font-mono text-white">Análisis Video Deportivo</h3>
@@ -848,6 +854,48 @@
                     this.volume = 0;
                 });
             });
+        });
+
+        // SINCRONIZAR AUDIO MP3 CON VIDEOS
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para sincronizar un video con su audio
+            function syncVideoWithAudio(videoId, audioId) {
+                const video = document.getElementById(videoId);
+                const audio = document.getElementById(audioId);
+
+                if (!video || !audio) return;
+
+                // Reproducir audio cuando se reproduce el video
+                video.addEventListener('play', function() {
+                    audio.currentTime = video.currentTime;
+                    audio.play();
+                });
+
+                // Pausar audio cuando se pausa el video
+                video.addEventListener('pause', function() {
+                    audio.pause();
+                });
+
+                // Sincronizar tiempo cuando el usuario salta a otra posición
+                video.addEventListener('seeked', function() {
+                    audio.currentTime = video.currentTime;
+                });
+
+                // Detener audio cuando termina el video
+                video.addEventListener('ended', function() {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+
+                // Sincronizar volumen del audio con controles personalizados si los hay
+                video.addEventListener('volumechange', function() {
+                    // El audio mantiene su volumen independiente ya que el video está muteado
+                });
+            }
+
+            // Sincronizar cada video con su audio correspondiente
+            syncVideoWithAudio('video-sistema-insumos', 'audio-sistema-insumos');
+            syncVideoWithAudio('video-analisis-videos', 'audio-analisis-videos');
         });
     </script>
 
